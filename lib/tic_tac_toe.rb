@@ -101,6 +101,11 @@ class TicTacToe
   end
 
   def winner
-    
+    if won?
+      winning_array = won?
+      token_index = winning_array[0]
+      token = @board[token_index]
+      token
+    end
   end
 end
