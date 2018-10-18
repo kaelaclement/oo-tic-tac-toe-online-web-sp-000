@@ -79,4 +79,8 @@ class TicTacToe
       false
     end
   end
+
+  def full?
+    @board.all?{|space| space == "X" || space == "O"}
+  end
 end
