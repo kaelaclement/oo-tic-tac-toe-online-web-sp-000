@@ -69,13 +69,13 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.each do |win_array|
-      if win_array.all?{|board_position| board[board_position] == "X"}
+      if win_array.all?{|board_position| @board[board_position] == "X"}
         return win_array
-      elsif win_array.all?{|board_position| board[board_position] == "O"}
+      elsif win_array.all?{|board_position| @board[board_position] == "O"}
         return win_array
       end
     end
-    if board.all?{|space| position_taken?(board, space.to_i)} || board.none?{|space| position_taken?(board, space.to_i)}
+    if @board.all?{|space| position_taken?(space.to_i)} || @board.none?{|space| position_taken?(space.to_i)}
       false
     end
   end
